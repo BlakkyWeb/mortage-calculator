@@ -1,0 +1,39 @@
+@media (320px <= width <= 768px){
+    body{
+        padding: 0;
+        height: 100%;
+    }
+    .main-body{
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .main-body > .input{
+        width: 100%;
+        border-radius: 0;
+        padding: 10px;
+        padding: 30px 20px;
+    }
+    .main-body > .input > .body > .body1,
+    .main-body > .input > .body > .body2{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .main-body > .input > .body{
+        flex-direction: column;
+    }
+    .main-body > .cover{
+        width: 100%;
+        border-radius: 0;
+        padding: 30px 20px;
+        min-height: fit-content;
+    }
+    .main-body > .output{
+        width: 100%;
+        border: 0;
+        padding: 30px 20px;
+        min-height: fit-content;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+}

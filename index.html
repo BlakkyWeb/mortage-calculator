@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortage Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="import" href="./assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-body">
+        <div class="input">
+            <div class="header">
+                <p>Mortgage Calculator</p>
+                <button id="clear">
+                    <a href="#">Clear All</a>
+                </button>
+            </div>
+            <div class="top-body">
+                <p>Mortgage Amount</p>
+                <div class="input-box">
+                    <p>$</p>
+                    <input type="text" id="amountInput">
+                </div>
+                <p id="amountError" class = 'error'>This field is required</p>
+            </div>
+
+            <div class="body">
+                <div class="body1">
+                    <p>Mortgage Term</p>
+                    <div class="input-box">
+                        <input id="yearInput"  name="" type="text">
+                        <p>years</p>
+                    </div>
+                    <p id="yearError" class = 'error'>This field is required</p>
+                </div>
+                <div class="body2">
+                    <p>Interest Rate</p>
+                    <div class="input-box">
+                        <input id="rateInput" type="text" name="" id="">
+                        <p>%</p>
+                    </div>
+                    <p id="interestError" class="error">This field is required</p>
+                </div>
+            </div>
+
+            <div class="lower-body">
+                <p>Mortgage Type</p>
+                <button id="repaymentToggle" class="toggle">
+                    <input type="checkbox" name="" id="repayment">
+                    <p>Repayment</p>
+                </button>
+                <button class="toggle" id="interestToggle">
+                    <input type="checkbox" name="" id="interest">
+                    <p>Interest Only</p>
+                </button>
+                <p id="toggleError" class='error'>This field is required</p>
+            </div>
+
+            <button id="button" class="button-div">
+                <img src="./assets/images/icon-calculator.svg" alt="icon-calculator">
+                <p>Calculate Repayments</p>
+            </button>
+        </div>
+        <div id="coverPage" class="cover">
+            <img src="./assets/images/illustration-empty.svg" alt="icon-calculator">
+            <h3>Results shown here</h3>
+            <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+        </div>
+        <div id="outputPage" class="output">
+            <h3>Your results</h3>
+            <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+            <div class="display">
+                <div class="up">
+                    <p>Your monthly repayments</p>
+                    <p id="monthlyText"></p>
+                </div>
+                <hr>
+                <div class="down">
+                    <p>Total you'll repay over the term</p>
+                    <p id="overallText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="./index.js"></script>
+
+</html>

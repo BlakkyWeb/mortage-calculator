@@ -1,0 +1,298 @@
+:root{
+    --Lime-: 61, 70%, 52%;
+    --Lime1-: 61, 70%, 52%, 0.7;
+    --Red-: 4, 69%, 50%;
+    --White-: 0, 0%, 100%;
+    --Slate-100-: 202, 86%, 94%;
+    --Slate-300-: 203, 41%, 72%;
+    --Slate-500-: 200, 26%, 54%;
+    --Slate-700-: 200, 24%, 40%;
+    --Slate-900-: 202, 55%, 16%;
+}
+
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+#amountError{
+    display: none;
+}
+#yearError{
+    display: none;
+}
+#interestError{
+    display: none;
+}
+#toggleError{
+    display: none;
+}
+
+
+.output{
+    display: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(var(--Slate-100-));
+    padding: 100px 250px;;
+}
+
+.main-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: hsl(var(--White-));
+    border-radius: 50px;
+}
+
+.main-body > .input{
+    background-color: hsl(var(--White-));
+    width: 50%;
+    padding: 40px;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.main-body > .input > .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.main-body > .input > .header > p{
+    font-weight: 600;
+    color: hsl(var(--Slate-900-));
+}
+
+.main-body > .input > .header > button{
+    background: transparent;
+    border: 0;
+}
+
+.main-body > .input > .header > button > a{
+    color: hsl(var(--Slate-700-));
+}
+
+.main-body > .input > .body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-body > .input > .body > .body1,
+.main-body > .input > .body > .body2{
+    width: 49%;
+}
+
+.main-body > .input > .top-body,
+.main-body > .input > .body > .body1,
+.main-body > .input > .body > .body2,
+.main-body > .input > .body > .lower-body{
+    margin-bottom: 20px;
+}
+
+.main-body > .input > .top-body:hover,
+.main-body > .input > .body > .body1:hover,
+.main-body > .input > .body > .body2:hover,
+.main-body > .input > .lower-body:hover,
+.main-body > .input > .button:hover{
+    cursor: pointer;
+}
+
+.main-body > .input > .top-body > p, 
+.main-body > .input > .body > .body1 > p,
+.main-body > .input > .body > .body2 > p,
+.main-body > .input > .lower-body > p{
+    margin-bottom: 8px;
+    color: hsl(var(--Slate-900-));
+    /* font-size: 14px; */
+    color: hsl(var(--Slate-700-));
+    
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid hsl(var(--Slate-900-));
+    margin-bottom: 10px;
+}
+
+.input-box > p{
+    padding: 10px 15px;
+    background-color: hsl(var(--Slate-300-));
+    color: hsl(var(--Slate-700-));
+}
+
+.input-box > input{
+    width: 100%;
+    border: 0;
+    padding: 0 10px;
+    outline: 0;
+}
+
+.input-box > input:hover{
+    cursor: pointer;
+}
+
+.toggle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid hsl(var(--Slate-500-));
+    background: transparent;
+    outline: 0;
+}
+
+.toggle:hover{
+    border: 2px solid hsl(var(--Lime1-));
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle:hover > .circle{
+    border: 2px solid hsl(var(--Lime1-));
+    transition: all 0.3s ease-in-out;
+}
+
+
+.toggle > input{
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.toggle > p{
+    color: hsl(var(--Slate-900-));
+    font-weight: 600;
+}
+
+.button-div{
+    margin-top: 20px;
+    border-radius: 50px;
+    width: fit-content;
+    background-color: hsl(var(--Lime-));
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+}
+
+.button-div:hover{
+    background: hsla(var(--Lime1-));
+    transition: all 0.3s ease-in-out;
+}
+
+.button-div > img{
+    margin-right: 10px;
+}
+
+.main-body > .cover{
+    background-color: hsl(var(--Slate-900-));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: hsl(var(--White-));
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 50%;
+    min-height: 580px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.main-body > .cover > h3{
+    margin: 15px 0;
+    font-size: 24px;
+    color: hsl(var(--Slate-100-));
+}
+
+.main-body > .cover > p{
+    color: hsl(var(--Slate-500-));
+    font-size: 16px;
+}
+
+.main-body > .output{
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    background-color: hsl(var(--Slate-900-));
+    padding: 50px;
+    text-align: left;
+    min-height: 580px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: hsl(var(--White-));
+}
+
+.main-body > .output > h3{
+    color: hsl(var(--Slate-100-));
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.main-body > .output > p{
+    font-size: 16px;
+    color: hsl(var(--Slate-500-));
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.main-body > .output > .display{
+    background: black;
+    padding: 30px;
+    border-radius: 5px;
+    border-top: 4px solid hsl(var(--Lime-));
+}
+
+.main-body > .output > .display > .up > p:nth-child(1){
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: hsl(var(--Slate-500-));
+}
+
+.main-body > .output > .display > .up > p:nth-child(2){
+    color: hsl(var(--Lime-));
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.main-body > .output > .display > hr{
+    margin: 30px 0;
+}
+
+.main-body > .output > .display > .down > p:nth-child(1){
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: hsl(var(--Slate-500-));
+}
+
+.main-body > .output > .display > .down > p:nth-child(2){
+    color: hsl(var(--White-));
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.error{
+    color: hsl(var(--Red-)) !important;
+}
